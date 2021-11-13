@@ -1,4 +1,6 @@
 import React from 'react'
+import Nav from './Nav'
+import HomePage from './HomePage';
 
 
 
@@ -6,8 +8,10 @@ function App(){
 
     return (
         <>
-        hello this is the beggining of your react app
-    </>
+        {/* add slider here */}
+            <Nav />
+            <HomePage />
+        </>
     )
 
 }
