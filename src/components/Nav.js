@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom'
+
 const Nav = () => {
 
     return (
@@ -7,9 +9,15 @@ const Nav = () => {
         <nav>
             {/* list items */}
             <ul>
-                <li>Home</li>
-                <li>Meal Plan</li>
-                <li>About</li>
+                <Link to="/home">
+                    Home
+                </Link>
+                <Link to="/mealplan">
+                    Meal Plan
+                </Link>
+                <Link to="/about">
+                    About
+                </Link>
             </ul>            
 
         </nav>
