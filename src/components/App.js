@@ -1,3 +1,4 @@
+import {Switch, Route} from 'react-router-dom'
 import React from 'react'
 import Nav from './Nav'
 import HomePage from './HomePage';
@@ -10,7 +11,11 @@ function App(){
         <>
         {/* add slider here */}
             <Nav />
-            <HomePage />
+            <Switch>
+                <Route path="/">
+                    <HomePage />
+                </Route>
+            </Switch>
         </>
     )
 
