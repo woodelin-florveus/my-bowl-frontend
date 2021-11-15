@@ -2,40 +2,19 @@ import { useState, useEffect } from "react";
 
 const MealForm = () => {
 
-    const [searchMeal, setSearchMeal] = useState('Rice')
+    const [searchMeal, setSearchMeal] = useState("")
 
 
     const handleChange = (event) => {
-        setSearchMeal(event.target.value)
+        setSearchMeal({[event.target.name]:event.target.value})
+        console.log(event.target.value)
     }
 
-    const resetSearch = () => {
-        setSearchMeal("")
-    }
-
-    const callSearch = (event) => {
-        event.preventDefault()
-        setSearchMeal({...searchMeal})
-        resetSearch()
-
-    }
 
     const submitSearch = (event) => {
         event.preventDefault()
-
-        fetch(`http//localhost:3000/meals/search`, {
-            method: "GET", 
-            headers: {
-                "Content-Type": "application/json", 
-                "Accepts": "application/json"
-            }, 
-             body: JSON.stringify({
-                 query: searchMeal
-             })
-        })
-
+       
     }
-
 
 
     return(
@@ -44,11 +23,12 @@ const MealForm = () => {
 
             <form className="searchForm" onSubmit={submitSearch}>
                 <input
-                    value={searchMeal}
+                    value={searchMeal.name}
+                    name="searchterm"
                     onChange={handleChange}
                     type="text"
                 />
-                <input onClick={callSearch} type="submit" value="SEARCH" />
+                <input type="submit" value="submit" />
             </form>
 
 
