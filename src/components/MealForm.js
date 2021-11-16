@@ -2,17 +2,33 @@ import { useState, useEffect } from "react";
 
 const MealForm = () => {
 
-    const [searchMeal, setSearchMeal] = useState("")
+    const [searchMeal, setSearchMeal] = useState({
+        query: ""
+    })
+
+    console.log(searchMeal)
 
 
     const handleChange = (event) => {
         setSearchMeal({[event.target.name]:event.target.value})
-        console.log(event.target.value)
     }
+
 
 
     const submitSearch = (event) => {
         event.preventDefault()
+       
+        fetch("http://localhost:3000/meals/search", {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json'
+            }, 
+            body: JSON.stringify({query: searchMeal.query})
+        })
+        .then(response => response.json())
+        .then(foodData => {
+            console.log(foodData)
+        })
        
     }
 
@@ -20,11 +36,10 @@ const MealForm = () => {
     return(
         <div className="formMeal">
 
-
             <form className="searchForm" onSubmit={submitSearch}>
                 <input
                     value={searchMeal.name}
-                    name="searchterm"
+                    name="query"
                     onChange={handleChange}
                     type="text"
                 />
