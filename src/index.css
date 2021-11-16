@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --ff-primary:'Source Sans Pro', sans-serif;;
+  --ff-secondary: 'Source Code Pro', monospace;;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #de8159;
+
+  --fs-h1: 2em;
+  --fs-h2: 1.5em;
+  --fs-h3: 1.2em;
+  --fs-body: 1em;
+}
+
+/* add @media for font size */
+
+
+/* image */
+
+img {
+  width: 100%;
+}
+
+
+/* nav bar  */
+
+nav {
+  text-align: center;
+  padding:1em;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+}

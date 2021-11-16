@@ -1,23 +1,28 @@
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
 
     return (
     <>
+
+        <img src="https://dummyimage.com/1200x500/000/fff" className="main_image" alt="dummy_image" />
     
         <nav>
             {/* list items */}
             <ul>
-                <Link to="/home">
+                <NavLink exact to="/home">
                     Home
-                </Link>
-                <Link to="/mealplan">
+                </NavLink>
+                <NavLink exact to="/mealplan">
                     Meal Plan
-                </Link>
-                <Link to="/about">
+                </NavLink>
+                <NavLink exact to="/about">
                     About
-                </Link>
+                </NavLink>
+                <NavLink exact to="/about">
+                    Faq
+                </NavLink>
             </ul>            
 
         </nav>
