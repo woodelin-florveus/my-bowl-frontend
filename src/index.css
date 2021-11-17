@@ -48,3 +48,9 @@ nav a {
   padding: 1em;
   text-decoration: none;
 }
+
+/* meal plan page */
+
+.mealPlan__title {
+  text-align: center;
+}
