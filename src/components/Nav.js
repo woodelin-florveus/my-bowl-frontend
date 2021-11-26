@@ -14,6 +14,9 @@ const Nav = () => {
                 <NavLink exact to="/home">
                     Home
                 </NavLink>
+                <NavLink exact to="/mealpage">
+                    Meal Page
+                </NavLink>
                 <NavLink exact to="/mealplan">
                     Meal Plan
                 </NavLink>

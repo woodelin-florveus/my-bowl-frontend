@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
+import SearchResults from "./SearchResults"
 
-const MealForm = () => {
+const MealSearch = () => {
 
     const [searchMeal, setSearchMeal] = useState({
         query: ""
     })
 
-    console.log(searchMeal)
+
 
 
     const handleChange = (event) => {
@@ -27,10 +28,15 @@ const MealForm = () => {
         })
         .then(response => response.json())
         .then(foodData => {
-            console.log(foodData)
+            setSearchMeal(foodData.hints)
+            // foodData.hints.map((result) => {
+            //     setSearchMeal(result)
+            // })
         })
        
-    }
+    }  
+    
+    console.log(searchMeal)
 
 
     return(
@@ -46,22 +52,12 @@ const MealForm = () => {
                 <input type="submit" value="submit" />
             </form>
 
-
-
-            {/* <section className="search_meal">
-                <div className="search">
-                    <input type="text"  className="search_food" placeholder="what meals are you looking for"/>
-                    <button
-                    name="search"
-                    type="submit"
-                    className="search_button"
-                    />
-                </div>
-            </section> */}
-             
+            <SearchResults searchMeal={searchMeal} />
+            
+                         
         </div>
     )
 }
 
 
-export default MealForm;
+export default MealSearch;

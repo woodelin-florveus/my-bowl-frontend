@@ -3,7 +3,8 @@ import React from 'react'
 import Nav from './Nav'
 import HomePage from './HomePage';
 import MealPlan from './MealPlan';
-import MealForm from './MealForm';
+import MealSearch from './MealSearch';
+import MealPage from './MealPage';
 
 
 
@@ -19,13 +20,17 @@ function App(){
                 <Route path="/home">
                     <HomePage />
                 </Route>
+
+                <Route path="/mealpage">
+                    <MealPage />
+                </Route>
                 
                 <Route path="/mealplan">
                     <MealPlan />
                 </Route>
 
                 <Route path="/mealform">
-                    <MealForm />
+                    <MealSearch />
                 </Route>
 
             </Switch>

@@ -29,6 +29,14 @@ code {
 /* add @media for font size */
 
 
+/* add width fomat */
+
+.pageFormat {
+  width: 80%;
+  margin: auto;
+}
+
+
 /* image */
 
 img {

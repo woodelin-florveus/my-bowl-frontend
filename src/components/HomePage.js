@@ -2,7 +2,7 @@
 const HomePage = () => {
 
     return (
-        <>
+        <div className="pageFormat">
             <section className="intro">
                 <h1 className="section__title section__title--intro"> Our Services </h1>
             </section>
@@ -52,7 +52,7 @@ const HomePage = () => {
                 </div>
             </section>
             {/* add a universal footer */}
-        </>
+        </div>
     )
 
 }
