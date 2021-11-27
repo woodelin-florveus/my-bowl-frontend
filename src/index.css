@@ -39,9 +39,9 @@ code {
 
 /* image */
 
-img {
+/* img {
   width: 100%;
-}
+} */
 
 
 /* nav bar  */
@@ -62,3 +62,27 @@ nav a {
 .mealPlan__title {
   text-align: center;
 }
+
+
+/* search results container */
+
+.resultContainer {
+  width:100%;
+  float: left;
+}
+
+.resultField {
+  width: 100%;
+  float: left;
+  list-style: none;
+}
+
+.result_cards {
+  float: left;
+  padding: 1em;
+}
+
+.card_content {
+  border: 1px solid red;
+}
+

@@ -36,8 +36,9 @@ const MealSearch = () => {
        
     }  
     
-    console.log(searchMeal)
-
+    // const displayMeal = searchMeal.length > 0 && searchMeal.map((result) => {
+    //     console.log(result)
+    // })
 
     return(
         <div className="formMeal">
