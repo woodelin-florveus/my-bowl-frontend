@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import MealPlan from './MealPlan';
 import MealSearch from './MealSearch';
 import MealPage from './MealPage';
+import MealInfo from './MealInfo'
 
 
 
@@ -19,6 +20,10 @@ function App(){
             <Switch>
                 <Route path="/home">
                     <HomePage />
+                </Route>
+
+                <Route path="/meals/:id">
+                    <MealInfo />
                 </Route>
 
                 <Route path="/mealpage">

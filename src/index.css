@@ -39,9 +39,9 @@ code {
 
 /* image */
 
-/* img {
+.main_image {
   width: 100%;
-} */
+}
 
 
 /* nav bar  */
@@ -94,12 +94,68 @@ nav a {
 /* homepage styling */
 
 
+
+.section__title {
+  text-align: center;
+  margin: 2em;
+}
+
+
+/* .services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 .services {
-  width: 100%;
-  float: left;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
 }
 
 .service_card {
-  width: 33.3%;
-  float: left;
+  text-align: center;
 }
+
+/* .service_card p {
+} */
+
+.content h3 {
+  text-align: center;
+}
+
+
+.why_our_services {
+  width: 100%;
+  float: left;
+  margin-top: 6em;
+}
+
+.why_container {
+  display: flex;
+  flex-wrap: flex;
+}
+
+.why_content h2 {
+  text-align: center;
+}
+
+.why_content p {
+  font-size: 17px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.why_content {
+  flex: 1 1 200px;
+}
+
+
+/* meal card */
+
+.meal_list {
+  width: 30%;
+  list-style: none;
+}
+
+

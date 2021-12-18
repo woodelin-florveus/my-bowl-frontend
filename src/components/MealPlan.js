@@ -2,6 +2,7 @@ import { Card } from 'semantic-ui-react'
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
+import MealCreateForm from "./MealCreateForm"
 import MealCard from "./MealCard"
 
 const MealPlan = () => {
@@ -37,8 +38,11 @@ const MealPlan = () => {
         <div className="pageFormat">
             <section className="mealPlan__intro">
                 <h1 className="section__title mealPlan__title"> Meal Plan </h1>
-                <div className="meal__creator">
-                    <button className="meal_button" onClick={redirect}> + </button>
+                <div className="meal_lookup">
+                    <button className="meal_button" onClick={redirect}> Look up meals </button>
+                </div>
+                <div className="meal_creator">
+                    <button className="create_button"> Create plan </button>
                 </div>
             </section>
 
