@@ -2,7 +2,6 @@ import { Card } from 'semantic-ui-react'
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-import MealCreateForm from "./MealCreateForm"
 import MealCard from "./MealCard"
 
 const MealPlan = () => {
@@ -34,6 +33,10 @@ const MealPlan = () => {
         history.push('/mealform')
     }
 
+    const create = () => {
+        history.push('/mealcreate')
+    }
+
     return (
         <div className="pageFormat">
             <section className="mealPlan__intro">
@@ -42,7 +45,7 @@ const MealPlan = () => {
                     <button className="meal_button" onClick={redirect}> Look up meals </button>
                 </div>
                 <div className="meal_creator">
-                    <button className="create_button"> Create plan </button>
+                    <button className="create_button" onClick={create}> Create plan </button>
                 </div>
             </section>
 

@@ -6,6 +6,7 @@ import MealPlan from './MealPlan';
 import MealSearch from './MealSearch';
 import MealPage from './MealPage';
 import MealInfo from './MealInfo'
+import MealCreateForm from './MealCreateForm';
 
 
 
@@ -36,6 +37,10 @@ function App(){
 
                 <Route path="/mealform">
                     <MealSearch />
+                </Route>
+
+                <Route path="/mealcreate">
+                    <MealCreateForm />
                 </Route>
 
             </Switch>
